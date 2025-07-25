@@ -53,10 +53,6 @@ export function SettingProvider({ children }) {
 
   const LOCAL_STORAGE_KEY = 'rps_mini_settings';
 
-  const hasStorage = () => {
-    return !!getFromStorage();
-  };
-
   const persistToStorage = (settingsData) => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(settingsData));
   };
