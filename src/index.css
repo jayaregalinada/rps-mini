@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'Munro Narrow';
+  src: url('./fonts/munro-narrow-webfont.woff2') format('woff2'),
+    url('./fonts/munro-narrow-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Munro Small';
+  src: url('./fonts/munro-small-webfont.woff2') format('woff2'),
+    url('./fonts/munro-small-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Munro';
+  src: url('./fonts/munro-webfont.woff2') format('woff2'),
+    url('./fonts/munro-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Munro', sans-serif;
+  --font-munro: 'Munro', sans-serif;
+  --font-munro-small: 'Munro Small', sans-serif;
+  --font-munro-narrow: 'Munro Narrow', sans-serif;
+
+  --animate-flash: flash 0.2s steps(4, start) 5;
+  --animate-hurt: hurt-shake 0.3s steps(2, end), hurt-flash 0.3s steps(2, end);
+  --animate-winner: winner-scale 0.3s ease-in-out, winner-glow 0.3s ease-in-out;
+
+  --color-primary: oklch(92% 16% 89deg);
+  --color-secondary: oklch(83% 22% 79deg);
+
+  @keyframes flash {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.1;
+    }
+  }
+
+  @keyframes hurt-shake {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    20% {
+      transform: translate(-4px, 0);
+    }
+    40% {
+      transform: translate(4px, 0);
+    }
+    60% {
+      transform: translate(-4px, 0);
+    }
+    80% {
+      transform: translate(4px, 0);
+    }
+  }
+
+  @keyframes hurt-flash {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes winner-scale {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes winner-glow {
+    0%,
+    100% {
+      box-shadow: 0 0 0 var(--color-green-500);
+    }
+    50% {
+      box-shadow: 0 0 6px 3px var(--color-green-500);
+    }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-primary);
+    background-image: url('./assets/background-pattern.png');
+    background-repeat: repeat;
+    background-size: 300px;
+  }
+}
