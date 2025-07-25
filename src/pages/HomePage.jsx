@@ -23,20 +23,20 @@ function HomePage() {
 
   return (
     <section className='w-full h-dvh grid place-items-center '>
-      <div className='grid gap-10 border-8 border-gray-900 bg-primary px-12 py-6'>
+      <div className='grid gap-10 border-8 border-gray-900 bg-primary p-12'>
         <h1 className='text-7xl text-gray-900'>
           Do you like to play with music?
         </h1>
         <div className='flex gap-4 justify-center w-lg mx-auto'>
           <Button
-            className='text-3xl w-full bg-green-400'
+            className='text-3xl w-full bg-green-400 border-4'
             withFlashing
             onClick={() => handleClick(true)}
           >
             Yes
           </Button>
           <Button
-            className='text-3xl w-full bg-red-400'
+            className='text-3xl w-full bg-red-400 border-4'
             withFlashing
             onClick={() => handleClick(false)}
           >

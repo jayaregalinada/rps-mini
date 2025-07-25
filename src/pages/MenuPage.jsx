@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 import { useGame } from '../context/GameContext';
 import { useMusic } from '../context/MusicContext';
 import { useSetting } from '../context/SettingContext';
+import MusicPlayer from '../components/MusicPlayer';
 
 function MenuPage() {
   const navigate = useNavigate();
@@ -81,6 +82,7 @@ function MenuPage() {
       >
         Settings
       </Button>
+      <MusicPlayer />
     </section>
   );
 }

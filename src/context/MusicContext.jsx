@@ -20,7 +20,7 @@ const initialState = {
       credit: (
         <p>
           Free Music For Your Youtube Videos{' '}
-          <a href='https://www.youtube.com/user/HeatleyBros'>
+          <a target='_blank' href='https://www.youtube.com/user/HeatleyBros'>
             https://www.youtube.com/user/HeatleyBros
           </a>
         </p>
